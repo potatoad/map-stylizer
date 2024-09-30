@@ -247,10 +247,10 @@ class Map:
                 self._render(p, way, tag)
 
         # Lastly, color the out of bounds regions white: T, B, L, R
-        p.fillRect(0, 0, w, yo, QColor(255, 255, 255))
-        p.fillRect(0, h-yo, w, yo, QColor(255, 255, 255))
-        p.fillRect(0, 0, xo, h, QColor(255, 255, 255))
-        p.fillRect(w-xo, 0, xo, h, QColor(255, 255, 255))
+        p.fillRect(0, 0, int(w), int(yo), QColor(255, 255, 255))
+        p.fillRect(0, int(h-yo), int(w), int(yo), QColor(255, 255, 255))
+        p.fillRect(0, 0, int(xo), int(h), QColor(255, 255, 255))
+        p.fillRect(int(w-xo), 0, int(xo), int(h), QColor(255, 255, 255))
 
     """
     ###########################################################################
